@@ -442,7 +442,7 @@ essentials () {
   have_tarball() {
     # if Arch Linux tarball is found
 
-    ARCH="$(ls | grep ArchLinuxARM-.*-latest.tar.gz 2> /dev/null | head -n1)"
+    ARCH="$(ls | grep ArchLinuxARM-oak.*-latest.tar.gz 2> /dev/null | head -n1)"
 
     if [ $ARCH ]; then
 
@@ -528,7 +528,7 @@ essentials () {
       fi
     fi
   else
-    alarm_codename="$(echo $tarball | sed 's/ArchLinuxARM-//' | sed 's/-latest.tar.gz//')"
+    alarm_codename="$(echo $tarball | sed 's/ArchLinuxARM-oak-//' | sed 's/-latest.tar.gz//')"
     path_to_tarball="$DIR/$tarball"
   fi
 
